@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 41037787}
   - component: {fileID: 41037786}
   - component: {fileID: 41037785}
-  m_Layer: 9
+  m_Layer: 17
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 240129026}
   - component: {fileID: 240129025}
   - component: {fileID: 240129024}
-  m_Layer: 9
+  m_Layer: 17
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 303039452}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 560311315}
   - component: {fileID: 560311314}
   - component: {fileID: 560311313}
-  m_Layer: 9
+  m_Layer: 17
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,7 +672,7 @@ GameObject:
   - component: {fileID: 805750599}
   - component: {fileID: 805750598}
   - component: {fileID: 805750597}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -801,7 +801,7 @@ GameObject:
   - component: {fileID: 810853098}
   - component: {fileID: 810853097}
   - component: {fileID: 810853096}
-  m_Layer: 9
+  m_Layer: 17
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -992,7 +992,7 @@ GameObject:
   - component: {fileID: 831876029}
   - component: {fileID: 831876030}
   - component: {fileID: 831876031}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Player (1)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1162,7 +1162,7 @@ GameObject:
   - component: {fileID: 940470967}
   - component: {fileID: 940470966}
   - component: {fileID: 940470971}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1329,7 +1329,7 @@ GameObject:
   - component: {fileID: 1048663351}
   - component: {fileID: 1048663350}
   - component: {fileID: 1048663349}
-  m_Layer: 9
+  m_Layer: 17
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1424,7 +1424,7 @@ GameObject:
   - component: {fileID: 1092275728}
   - component: {fileID: 1092275727}
   - component: {fileID: 1092275726}
-  m_Layer: 9
+  m_Layer: 17
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1596,7 +1596,7 @@ GameObject:
   - component: {fileID: 1200036597}
   - component: {fileID: 1200036596}
   - component: {fileID: 1200036595}
-  m_Layer: 7
+  m_Layer: 16
   m_Name: Sphere (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1719,7 +1719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1264144923}
-  m_Layer: 9
+  m_Layer: 17
   m_Name: Bounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1758,7 +1758,7 @@ GameObject:
   - component: {fileID: 1267814359}
   - component: {fileID: 1267814358}
   - component: {fileID: 1267814357}
-  m_Layer: 7
+  m_Layer: 16
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1884,7 +1884,7 @@ GameObject:
   - component: {fileID: 1372844709}
   - component: {fileID: 1372844708}
   - component: {fileID: 1372844707}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1980,7 +1980,7 @@ GameObject:
   - component: {fileID: 1410012123}
   - component: {fileID: 1410012122}
   - component: {fileID: 1410012121}
-  m_Layer: 9
+  m_Layer: 17
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2075,7 +2075,7 @@ GameObject:
   - component: {fileID: 1512716434}
   - component: {fileID: 1512716436}
   - component: {fileID: 1512716437}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2160,7 +2160,7 @@ GameObject:
   - component: {fileID: 1601988071}
   - component: {fileID: 1601988070}
   - component: {fileID: 1601988069}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2445,7 +2445,7 @@ GameObject:
   - component: {fileID: 1882821477}
   - component: {fileID: 1882821476}
   - component: {fileID: 1882821475}
-  m_Layer: 9
+  m_Layer: 17
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2537,7 +2537,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1934897544}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2567,7 +2567,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1970886073}
-  m_Layer: 9
+  m_Layer: 17
   m_Name: Bounds (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

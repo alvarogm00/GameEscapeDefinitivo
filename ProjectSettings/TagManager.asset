@@ -8,14 +8,17 @@ TagManager:
   - ExplosiveBarrel
   - Target
   - Waypoint
+  - Enemy
+  - Bullet
+  - Manager
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PlatformPositionCollider
   - Water
   - UI
-  - 
+  - FPSWeapon
   - 
   - PostProcessing
   - Weapon
@@ -25,8 +28,8 @@ TagManager:
   - PlayerCollisionOnly
   - Weapon
   - Enemy
-  - 
-  - 
+  - Ball
+  - Bounds
   - 
   - 
   - 
