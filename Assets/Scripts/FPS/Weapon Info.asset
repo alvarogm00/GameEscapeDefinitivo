@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef170a60d3bd31b429960261fe23601e, type: 3}
+  m_Name: Weapon Info
+  m_EditorClassIdentifier: 
+  m_damage: 5
+  m_forceToApply: 0
+  m_weaponRange: 9999
+  m_cooldownTime: 0.5
+  m_maxAmmo: 10
+  m_accuracyDropPerShot: 10
+  m_accuracyRecoverPerSecond: 5
+  m_accuracy: 100
+  m_bulletsPerShot: 0
+  m_isMachineGun: 0
+  m_isShotgun: 0
