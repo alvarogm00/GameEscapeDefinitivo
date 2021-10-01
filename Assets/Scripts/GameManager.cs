@@ -1,18 +1,18 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : TemporalSingleton<GameManager>
 {
-    float                m_currentTime;
-    float                m_score;
-    public int                  m_fpsKeys;
+    float m_currentTime;
+    float m_score;
+    public int m_fpsKeys;
 
-    public bool          gametype1;
-    public float         m_maxTime;
-    public int           m_maxScore;
-    public int           m_numOfEnemies;
-    public int           m_maxNumOfEnemies;
+    public bool gametype1;
+    public float m_maxTime;
+    public int m_maxScore;
+    public int m_numOfEnemies;
+    public int m_maxNumOfEnemies;
 
     FPSDoor m_fpsDoor;
     GameCanvasController canvasController;
@@ -28,7 +28,7 @@ public class GameManager : TemporalSingleton<GameManager>
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
         Time.timeScale = 1;
-       
+
         if (Blackboard.m_gameType == GameType.PLAYER_VS_AI)
             SetGametype1();
         else if (Blackboard.m_gameType == GameType.PLAYER_VS_PLAYER)
@@ -54,7 +54,7 @@ public class GameManager : TemporalSingleton<GameManager>
         else
         {
             m_currentTime += Time.deltaTime;
-            if(m_score >= m_maxScore)
+            if (m_score >= m_maxScore)
             {
                 SetFinalScorePanel();
             }
@@ -62,7 +62,7 @@ public class GameManager : TemporalSingleton<GameManager>
 
         canvasController.m_time.text = m_currentTime.ToString("F0");
 
-        if(Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
         {
             PauseGame();
         }
@@ -113,7 +113,7 @@ public class GameManager : TemporalSingleton<GameManager>
 
     public void CheckFPSKeys(int keys)
     {
-        if(keys < 3)
+        if (keys < 3)
         {
 
         }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Camara : MonoBehaviour
 {
-
     public GameObject pos1;
     public GameObject pos2;
     public GameObject pos3;
@@ -30,7 +29,7 @@ public class Camara : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(changeTo1 == true)
+        if (changeTo1 == true)
         {
             changeTo2 = false;
             changeTo3 = false;
@@ -71,7 +70,7 @@ public class Camara : MonoBehaviour
             changeTo1 = false;
             thirdPerson = false;
         }
-        
+
 
     }
 
@@ -92,7 +91,7 @@ public class Camara : MonoBehaviour
     {
         camara.transform.position = Vector3.MoveTowards(camara.transform.position, pos3.transform.position, speed * Time.deltaTime);
 
-        transform.rotation = Quaternion.Lerp(transform.rotation,pos3.transform.rotation,1* Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, pos3.transform.rotation, 1 * Time.deltaTime);
 
         if (camara.transform.position == pos3.transform.position && camara.transform.rotation == pos3.transform.rotation)
         {
@@ -100,23 +99,4 @@ public class Camara : MonoBehaviour
             thirdPerson = true;
         }
     }
-
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if(other.tag == "ToShooter")
-    //    {
-    //        Debug.Log("heyyy");
-    //        Pos3();
-    //    }
-
-    //    if (other.tag == "ToTwinStick")
-    //    {
-    //        Pos2();
-    //    }
-
-    //    if (other.tag == "ToPlatform")
-    //    {
-    //        Pos1();
-    //    }
-    //}
 }
