@@ -30,21 +30,23 @@ public class TriggersCamaras : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //checkpointManager.currentCheckPoint = this.gameObject;
-
-        if (Shooter == true)
+        if(other.gameObject.tag == "Player")
         {
-            Debug.Log("heyyy");
-            camara.changeTo3 = true;
-        }
+            if (Shooter == true)
+            {
+                Debug.Log("heyyy");
+                camara.changeTo3 = true;
+            }
 
-        if (TwinStick == true)
-        {
-            camara.changeTo2 = true;
-        }
+            if (TwinStick == true)
+            {
+                camara.changeTo2 = true;
+            }
 
-        if (Platform == true)
-        {
-            camara.changeTo1 = true;
-        }
+            if (Platform == true)
+            {
+                camara.changeTo1 = true;
+            }
+        }       
     }
 }

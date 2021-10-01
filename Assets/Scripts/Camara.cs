@@ -16,6 +16,9 @@ public class Camara : MonoBehaviour
     public PlayerController controlShooter;
 
     public MouseLook rotShooter;
+    public Rotation rotTwin;
+    public Weapon weaponTwin;
+    public Canvas canvasPlatform;
 
     float speed = 5;
     public float rotationSpeed;
@@ -40,6 +43,9 @@ public class Camara : MonoBehaviour
         controlShooter = FindObjectOfType<PlayerController>();
         controlShooter.enabled = true;
         rotShooter.enabled = true;
+        rotTwin.enabled = false;
+        weaponTwin.enabled = false;
+        canvasPlatform.enabled = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -55,8 +61,11 @@ public class Camara : MonoBehaviour
             controlPlatform.enabled = false;
             controlShooter.enabled = false;
             rotShooter.enabled = false;
+            rotTwin.enabled = false;
+            weaponTwin.enabled = false;
+            canvasPlatform.enabled = true;
 
-            //player.rotation = new Quaternion(0, 90, 0,Quaternion.identity);
+            player.rotation = Quaternion.Euler(0,90,0);
 
             ToPlatform();
         }
@@ -67,13 +76,17 @@ public class Camara : MonoBehaviour
             changeTo3 = false;
             thirdPerson = false;
 
-
             platform = false;
 
             controlTwin.enabled = false;
             controlPlatform.enabled = false;
             controlShooter.enabled = false;
             rotShooter.enabled = false;
+            rotTwin.enabled = true;
+            weaponTwin.enabled = true;
+            canvasPlatform.enabled = false;
+
+            player.rotation = Quaternion.Euler(0, 90, 0);
 
             ToTwinstick();
         }
@@ -82,21 +95,25 @@ public class Camara : MonoBehaviour
         {
             changeTo2 = false;
             changeTo1 = false;
-
-
             platform = false;
 
             controlTwin.enabled = false;
             controlPlatform.enabled = false;
             controlShooter.enabled = false;
+            rotTwin.enabled = false;
+            weaponTwin.enabled = false;
+            canvasPlatform.enabled = false;
 
             ToShooter();
         }
 
         if (thirdPerson == true)
         {
-
             camara.transform.position = pos3.transform.position;
+        }
+        if (platform == true)
+        {
+            camara.transform.position = pos1.transform.position;
         }
     }
 
@@ -110,6 +127,7 @@ public class Camara : MonoBehaviour
         {
             controlPlatform.enabled = true;
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             changeTo1 = false;
             thirdPerson = false;
             platform = true;
@@ -128,6 +146,7 @@ public class Camara : MonoBehaviour
         {
             controlTwin.enabled = true;
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             changeTo2 = false;
             thirdPerson = false;
             platform = false;

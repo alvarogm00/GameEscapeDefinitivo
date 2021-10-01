@@ -1110,6 +1110,9 @@ MonoBehaviour:
   controlPlatform: {fileID: 665876452}
   controlShooter: {fileID: 0}
   rotShooter: {fileID: 541907031}
+  rotTwin: {fileID: 711971145}
+  weaponTwin: {fileID: 711971143}
+  canvasPlatform: {fileID: 234758964}
   rotationSpeed: 10
   changeTo1: 0
   changeTo2: 0
@@ -1302,6 +1305,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0acdd3884b8fa3f458df665be509954f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &711971143 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4490828950350292466, guid: 12ee76af625d6304d81772bff8d81d15,
+    type: 3}
+  m_PrefabInstance: {fileID: 4490828950788158645}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440aeb2ad94284c428c2e774aea235d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &711971145 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4490828950350292476, guid: 12ee76af625d6304d81772bff8d81d15,
+    type: 3}
+  m_PrefabInstance: {fileID: 4490828950788158645}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef04d0a7cf974d4e933ac7abe2a6cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &738456299
@@ -4382,6 +4409,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490828952171941344, guid: 12ee76af625d6304d81772bff8d81d15,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6069314351920415719, guid: 12ee76af625d6304d81772bff8d81d15,
         type: 3}
