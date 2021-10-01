@@ -27,6 +27,6 @@ public class CheckpointManager : MonoBehaviour
 
     public void ChangeCurrent()
     {
-        
+
     }
 }
