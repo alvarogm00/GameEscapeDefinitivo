@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FireBallSpawner : MonoBehaviour
-{
-    public float timeToShoot;
+{    
     public GameObject fireball;
+    public Transform shootingPoint;
+
+    public float timeToShoot;
+    public float fireballSpeed;
 
     float currentTimeToShoot;
+    bool canShoot = true;
+
     void Start()
     {
         currentTimeToShoot = timeToShoot;
@@ -25,6 +30,8 @@ public class FireBallSpawner : MonoBehaviour
 
     void Shoot()
     {
+        GameObject fireballCopy = Instantiate(fireball, shootingPoint.position, Quaternion.identity);
 
+        fireballCopy.GetComponent<Fireball>().SetSpeed(fireballSpeed);
     }
 }
