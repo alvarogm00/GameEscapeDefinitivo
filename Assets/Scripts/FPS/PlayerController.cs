@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
         if (mov.magnitude >= 1) mov.Normalize();
         m_characterController.Move(mov * m_movementSpeed * Time.deltaTime + Vector3.up * m_speedY * Time.deltaTime);
 
-        m_animController.SetMovementValues(mov.magnitude, m_speedY);
+        //m_animController.SetMovementValues(mov.magnitude, m_speedY);
     }
     protected virtual void Jump()
     {

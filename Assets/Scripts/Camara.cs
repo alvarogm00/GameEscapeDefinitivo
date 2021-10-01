@@ -9,7 +9,7 @@ public class Camara : MonoBehaviour
     public GameObject pos3;
     public Camera camara;
 
-    public GameObject player;
+    public Transform player;
 
     public Player controlTwin;
     public Player2DMovement controlPlatform;
