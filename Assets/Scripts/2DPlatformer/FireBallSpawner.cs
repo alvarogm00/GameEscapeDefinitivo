@@ -16,5 +16,15 @@ public class FireBallSpawner : MonoBehaviour
     void Update()
     {
         currentTimeToShoot -= Time.deltaTime;
+
+        if(currentTimeToShoot <= 0)
+        {
+            Shoot();
+        }
+    }
+
+    void Shoot()
+    {
+
     }
 }
