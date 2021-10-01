@@ -7,16 +7,8 @@ public class EnemyManager : TemporalSingleton<EnemyManager>
     public GameObject           m_enemy;
     public Transform[]          m_spawnPoints;
     private List<GameObject>    enemyVector = new List<GameObject>();
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public bool canSpawnEnemies = true;
 
     public void CreateEnemies(int numberOfEnemies, int maxNumberOfEnemies)
     {
@@ -36,15 +28,18 @@ public class EnemyManager : TemporalSingleton<EnemyManager>
 
     void SpawnEnemy()
     {
-        for (int i = 0; i < enemyVector.Count; i++)
+        if (canSpawnEnemies)
         {
-            if (!enemyVector[i].activeSelf)
+            for (int i = 0; i < enemyVector.Count; i++)
             {
-                int spawnIndex = Random.Range(0, m_spawnPoints.Length);
-                enemyVector[i].transform.position = m_spawnPoints[spawnIndex].position;
-                enemyVector[i].transform.rotation = m_spawnPoints[spawnIndex].rotation;
-                enemyVector[i].SetActive(true);
-                break;
+                if (!enemyVector[i].activeSelf)
+                {
+                    int spawnIndex = Random.Range(0, m_spawnPoints.Length);
+                    enemyVector[i].transform.position = m_spawnPoints[spawnIndex].position;
+                    enemyVector[i].transform.rotation = m_spawnPoints[spawnIndex].rotation;
+                    enemyVector[i].SetActive(true);
+                    break;
+                }
             }
         }
     }
@@ -53,5 +48,10 @@ public class EnemyManager : TemporalSingleton<EnemyManager>
     {
         enemy.SetActive(false);
         SpawnEnemy();
+    }
+
+    public void StopSpwaning(bool isSpawning)
+    {
+        canSpawnEnemies = isSpawning;
     }
 }

@@ -6,23 +6,27 @@ public class GameManager : TemporalSingleton<GameManager>
 {
     float                m_currentTime;
     float                m_score;
+    public int                  m_fpsKeys;
 
     public bool          gametype1;
     public float         m_maxTime;
     public int           m_maxScore;
     public int           m_numOfEnemies;
     public int           m_maxNumOfEnemies;
+
+    FPSDoor m_fpsDoor;
     GameCanvasController canvasController;
 
     public override void Awake()
     {
         base.Awake();
         canvasController = FindObjectOfType<GameCanvasController>();
+        m_fpsDoor = FindObjectOfType<FPSDoor>();
     }
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
         Time.timeScale = 1;
        
         if (Blackboard.m_gameType == GameType.PLAYER_VS_AI)
@@ -105,6 +109,25 @@ public class GameManager : TemporalSingleton<GameManager>
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+
+    public void CheckFPSKeys(int keys)
+    {
+        if(keys < 3)
+        {
+
+        }
+        else
+        {
+            m_fpsDoor.Open();
+            EnemyManager.Instance.StopSpwaning(false);
+        }
+    }
+
+    public void AddFPSKeys()
+    {
+        m_fpsKeys++;
+        CheckFPSKeys(m_fpsKeys);
     }
     public void SetGametype1()
     {

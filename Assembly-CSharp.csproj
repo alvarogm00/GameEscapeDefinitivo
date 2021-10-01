@@ -98,6 +98,8 @@
     <Compile Include="Assets\Scripts\TwinStick\ManagerTwinStick.cs" />
     <Compile Include="Assets\Scripts\FPS\PlayerController.cs" />
     <Compile Include="Assets\Scripts\2DPlatformer\ButtonSlot.cs" />
+    <Compile Include="Assets\Scripts\FPS\FPSDoor.cs" />
+    <Compile Include="Assets\Scripts\FPS\FPSKey.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
