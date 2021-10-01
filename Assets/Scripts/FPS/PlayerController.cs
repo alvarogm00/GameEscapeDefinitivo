@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
     protected PlayerAnimController m_animController;
     public GameObject[] m_weapons;
 
-    // Start is called before the first frame update
     protected virtual void Start()
     {
         //Cursor.lockState = CursorLockMode.Locked;
@@ -39,7 +38,6 @@ public class PlayerController : MonoBehaviour
         GameManager.Instance.UpdateHealth(m_currentHealth);
     }
 
-    // Update is called once per frame
     void Update()
     {
         Move();
