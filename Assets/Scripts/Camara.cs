@@ -56,6 +56,8 @@ public class Camara : MonoBehaviour
             controlShooter.enabled = false;
             rotShooter.enabled = false;
 
+            //player.rotation = new Quaternion(0, 90, 0,Quaternion.identity);
+
             ToPlatform();
         }
 
