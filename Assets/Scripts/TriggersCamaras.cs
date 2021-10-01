@@ -11,14 +11,14 @@ public class TriggersCamaras : MonoBehaviour
     public bool TwinStick;
     public bool Platform;
 
-    CheckpointManager checkpointManager;
+    //CheckpointManager checkpointManager;
 
     // Start is called before the first frame update
     void Start()
     {
         camara = FindObjectOfType<Camara>();
 
-        checkpointManager = FindObjectOfType<CheckpointManager>();
+        //checkpointManager = FindObjectOfType<CheckpointManager>();
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class TriggersCamaras : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        checkpointManager.currentCheckPoint = this.gameObject;
+        //checkpointManager.currentCheckPoint = this.gameObject;
 
         if (Shooter == true)
         {

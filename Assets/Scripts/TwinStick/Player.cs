@@ -52,10 +52,10 @@ public class Player : MonoBehaviour
 
     private void Mover()
     {
-        float inputZ = Input.GetAxis("Vertical");
-        float inputX = Input.GetAxis("Horizontal");
+        float inputZ = Input.GetAxis("Horizontal");
+        float inputX = Input.GetAxis("Vertical");
 
-        Vector3 mov = transform.forward * inputZ + transform.right * inputX;
+        Vector3 mov = transform.forward * inputZ + transform.right * -inputX;
 
         if (mov.magnitude > 1)
         {
