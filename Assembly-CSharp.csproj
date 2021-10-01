@@ -53,6 +53,7 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Camara.cs" />
     <Compile Include="Assets\Scripts\2DPlatformer\PlatformsPositionCollider.cs" />
     <Compile Include="Assets\Scripts\TwinStick\Rotation.cs" />
     <Compile Include="Assets\Scripts\FPS\Enemy\EnemyScriptable.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Scripts\FPS\PersistentSingleton.cs" />
     <Compile Include="Assets\Scripts\FPS\PlayerAnimController.cs" />
     <Compile Include="Assets\Scripts\TwinStick\Spawner1.cs" />
+    <Compile Include="Assets\Scripts\TriggersCamaras.cs" />
     <Compile Include="Assets\Scripts\FPS\TemporalSingleton.cs" />
     <Compile Include="Assets\Scripts\FPS\SingleBulletWeapon.cs" />
     <Compile Include="Assets\Scripts\TwinStick\Player.cs" />
@@ -90,13 +92,12 @@
     <Compile Include="Assets\Scripts\TwinStick\Spawner.cs" />
     <Compile Include="Assets\Scripts\FPS\Enemy\EnemySimpleStateMachine.cs" />
     <Compile Include="Assets\Scripts\FPS\Enumerations.cs" />
+    <Compile Include="Assets\Scripts\CheckpointManager.cs" />
     <Compile Include="Assets\Scripts\TwinStick\Bouncer.cs" />
     <Compile Include="Assets\Scripts\TwinStick\ManagerTwinStick.cs" />
     <Compile Include="Assets\Scripts\FPS\PlayerController.cs" />
     <Compile Include="Assets\Scripts\2DPlatformer\ButtonSlot.cs" />
-    <Compile Include="Assets\Scripts\Camara.cs" />
-    <Compile Include="Assets\Scripts\TriggersCamaras.cs" />
-    <Compile Include="Assets\Scripts\CheckpointManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerBasicMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
