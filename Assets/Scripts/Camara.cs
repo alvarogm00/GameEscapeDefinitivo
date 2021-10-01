@@ -10,6 +10,14 @@ public class Camara : MonoBehaviour
     public GameObject pos3;
     public Camera camara;
 
+    public GameObject player;
+
+    public Player controlTwin;
+    public Player2DMovement controlPlatform;
+    public PlayerController controlShooter;
+
+    public MouseLook rotShooter;
+
     float speed = 5;
     public float rotationSpeed;
 
@@ -18,13 +26,22 @@ public class Camara : MonoBehaviour
     public bool changeTo3;
 
     bool thirdPerson;
+    bool platform;
 
     // Start is called before the first frame update
     void Start()
     {
-        camara.transform.position = pos1.transform.position;
-        camara.transform.rotation = pos1.transform.rotation;
-        thirdPerson = false;
+        camara.transform.position = pos3.transform.position;
+        camara.transform.rotation = pos3.transform.rotation;
+        thirdPerson = true;
+        platform = false;
+        
+        controlTwin.enabled = false;
+        controlPlatform.enabled = false;
+        controlShooter = FindObjectOfType<PlayerController>();
+        controlShooter.enabled = true;
+        rotShooter.enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -35,7 +52,13 @@ public class Camara : MonoBehaviour
             changeTo2 = false;
             changeTo3 = false;
             thirdPerson = false;
-            Pos1();
+
+            controlTwin.enabled = false;
+            controlPlatform.enabled = false;
+            controlShooter.enabled = false;
+            rotShooter.enabled = false;
+
+            ToPlatform();
         }
 
         if (changeTo2 == true)
@@ -43,24 +66,41 @@ public class Camara : MonoBehaviour
             changeTo1 = false;
             changeTo3 = false;
             thirdPerson = false;
-            Pos2();
+            platform = false;
+
+            controlTwin.enabled = false;
+            controlPlatform.enabled = false;
+            controlShooter.enabled = false;
+            rotShooter.enabled = false;
+
+            ToTwinstick();
         }
 
         if (changeTo3 == true)
         {
             changeTo2 = false;
             changeTo1 = false;
-            Pos3();
+            platform = false;
+
+            controlTwin.enabled = false;
+            controlPlatform.enabled = false;
+            controlShooter.enabled = false;
+
+            ToShooter();
         }
 
         if (thirdPerson == true)
         {
-
             camara.transform.position = pos3.transform.position;
+        }
+
+        if (platform == true)
+        {
+            camara.transform.position = pos1.transform.position;
         }
     }
 
-    public void Pos1()
+    public void ToPlatform()
     {
         camara.transform.position = Vector3.MoveTowards(camara.transform.position, pos1.transform.position, speed * Time.deltaTime);
 
@@ -68,14 +108,17 @@ public class Camara : MonoBehaviour
 
         if (camara.transform.position == pos1.transform.position && camara.transform.rotation == pos1.transform.rotation)
         {
+            controlPlatform.enabled = true;
+            Cursor.lockState = CursorLockMode.None;
             changeTo1 = false;
             thirdPerson = false;
+            platform = true;
         }
         
 
     }
 
-    public void Pos2()
+    public void ToTwinstick()
     {
         camara.transform.position = Vector3.MoveTowards(camara.transform.position, pos2.transform.position, speed * Time.deltaTime);
 
@@ -83,12 +126,15 @@ public class Camara : MonoBehaviour
 
         if (camara.transform.position == pos2.transform.position && camara.transform.rotation == pos2.transform.rotation)
         {
+            controlTwin.enabled = true;
+            Cursor.lockState = CursorLockMode.None;
             changeTo2 = false;
             thirdPerson = false;
+            platform = false;
         }
     }
 
-    public void Pos3()
+    public void ToShooter()
     {
         camara.transform.position = Vector3.MoveTowards(camara.transform.position, pos3.transform.position, speed * Time.deltaTime);
 
@@ -96,27 +142,12 @@ public class Camara : MonoBehaviour
 
         if (camara.transform.position == pos3.transform.position && camara.transform.rotation == pos3.transform.rotation)
         {
+            controlShooter.enabled = true;
+            rotShooter.enabled = true;
+            Cursor.lockState = CursorLockMode.Locked;
             changeTo3 = false;
             thirdPerson = true;
+            platform = false;
         }
     }
-
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if(other.tag == "ToShooter")
-    //    {
-    //        Debug.Log("heyyy");
-    //        Pos3();
-    //    }
-
-    //    if (other.tag == "ToTwinStick")
-    //    {
-    //        Pos2();
-    //    }
-
-    //    if (other.tag == "ToPlatform")
-    //    {
-    //        Pos1();
-    //    }
-    //}
 }

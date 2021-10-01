@@ -18,7 +18,7 @@ public class TriggersCamaras : MonoBehaviour
     {
         camara = FindObjectOfType<Camara>();
 
-        checkpointManager = FindObjectOfType<CheckpointManager>();
+        //checkpointManager = FindObjectOfType<CheckpointManager>();
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class TriggersCamaras : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        checkpointManager.currentCheckPoint = this.gameObject;
+        //checkpointManager.currentCheckPoint = this.gameObject;
 
         if (Shooter == true)
         {
