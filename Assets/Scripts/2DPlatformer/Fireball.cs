@@ -6,9 +6,15 @@ public class Fireball : MonoBehaviour
 {
     float m_movementSpeed;
     public int m_damage;
+    public float m_timeToDestroy;
 
     void Update()
     {
+        m_timeToDestroy -= Time.deltaTime;
+
+        if (m_timeToDestroy <= 0)
+            Destroy();
+
         Move();
     }
 
@@ -31,4 +37,9 @@ public class Fireball : MonoBehaviour
 
         this.gameObject.SetActive(false);
     }
+
+    void Destroy()
+    {
+        this.gameObject.SetActive(false);
+    } 
 }

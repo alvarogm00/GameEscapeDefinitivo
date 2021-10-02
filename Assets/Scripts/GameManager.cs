@@ -43,24 +43,24 @@ public class GameManager : TemporalSingleton<GameManager>
 
     void Update()
     {
-        if (gametype1)
-        {
-            m_currentTime -= Time.deltaTime;
-            if (m_currentTime <= 0)
-            {
-                SetFinalScorePanel();
-            }
-        }
-        else
-        {
-            m_currentTime += Time.deltaTime;
-            if (m_score >= m_maxScore)
-            {
-                SetFinalScorePanel();
-            }
-        }
+        //if (gametype1)
+        //{
+        //    m_currentTime -= Time.deltaTime;
+        //    if (m_currentTime <= 0)
+        //    {
+        //        SetFinalScorePanel();
+        //    }
+        //}
+        //else
+        //{
+        //    m_currentTime += Time.deltaTime;
+        //    if (m_score >= m_maxScore)
+        //    {
+        //        SetFinalScorePanel();
+        //    }
+        //}
 
-        canvasController.m_time.text = m_currentTime.ToString("F0");
+        //canvasController.m_time.text = m_currentTime.ToString("F0");
 
         if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
         {
