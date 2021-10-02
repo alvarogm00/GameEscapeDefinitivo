@@ -136,7 +136,7 @@ public class PlayerController : MonoBehaviour
     {
         if(m_weapons.Length > 0) 
         {
-            m_animController.SetAnimator(m_weapons[weaponIndex].GetComponent<Animator>());
+            //m_animController.SetAnimator(m_weapons[weaponIndex].GetComponent<Animator>());
         }
     }
 }
