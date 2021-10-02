@@ -19,6 +19,9 @@ public class Camara : MonoBehaviour
     public Rotation rotTwin;
     public Weapon weaponTwin;
     public Canvas canvasPlatform;
+    public GameObject muroTwin;
+    public GameObject TwinLvl;
+    public GameObject enemyManagerShooter;
 
     float speed = 5;
     public float rotationSpeed;
@@ -47,6 +50,9 @@ public class Camara : MonoBehaviour
         weaponTwin.enabled = false;
         canvasPlatform.enabled = false;
         Cursor.lockState = CursorLockMode.Locked;
+        muroTwin.SetActive(false);
+        TwinLvl.SetActive(false);
+        enemyManagerShooter.SetActive(false);
         ToShooter();
     }
 
@@ -86,6 +92,9 @@ public class Camara : MonoBehaviour
             rotTwin.enabled = true;
             weaponTwin.enabled = true;
             canvasPlatform.enabled = false;
+            TwinLvl.SetActive(true);
+            muroTwin.SetActive(true);
+            enemyManagerShooter.SetActive(false);
 
             player.rotation = Quaternion.Euler(0, 90, 0);
 
@@ -166,6 +175,7 @@ public class Camara : MonoBehaviour
 
         if (camara.transform.position == pos3.transform.position && camara.transform.rotation == pos3.transform.rotation)
         {
+            enemyManagerShooter.SetActive(true);
             controlShooter.enabled = true;
             rotShooter.enabled = true;
             Cursor.lockState = CursorLockMode.Locked;
