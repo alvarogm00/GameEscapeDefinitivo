@@ -8,7 +8,7 @@ public class PlayerAnimController : MonoBehaviour
     float m_verticaleSpeed;
     int m_currentAmmo;
     int m_maxAmmo;
-    Animator m_animator;
+    public Animator m_animator;
 
     void Start()
     {
