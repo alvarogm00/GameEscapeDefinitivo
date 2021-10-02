@@ -51,9 +51,9 @@ public class Camara : MonoBehaviour
         canvasPlatform.enabled = false;
         Cursor.lockState = CursorLockMode.Locked;
         muroTwin.SetActive(false);
-        TwinLvl.SetActive(false);
-        enemyManagerShooter.SetActive(false);
+        TwinLvl.SetActive(false);        
         ToShooter();
+        enemyManagerShooter.SetActive(false);
     }
 
     // Update is called once per frame
