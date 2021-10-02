@@ -19,9 +19,15 @@ public class Camara : MonoBehaviour
     public Rotation rotTwin;
     public Weapon weaponTwin;
     public Canvas canvasPlatform;
+<<<<<<< HEAD
     //public GameObject muroTwin;
+=======
+    public Canvas canvasShooter;
+    public GameObject muroTwin;
+>>>>>>> 891b672742b916305de7379c0460ab0815edce35
     public GameObject TwinLvl;
     public GameObject enemyManagerShooter;
+    public SingleBulletWeapon armaShooter;
 
     float speed = 5;
     public float rotationSpeed;
@@ -49,9 +55,16 @@ public class Camara : MonoBehaviour
         rotTwin.enabled = false;
         weaponTwin.enabled = false;
         canvasPlatform.enabled = false;
+        canvasShooter.enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
+<<<<<<< HEAD
         //muroTwin.SetActive(false);
         TwinLvl.SetActive(false);        
+=======
+        muroTwin.SetActive(false);
+        TwinLvl.SetActive(false);
+        armaShooter.enabled = false;
+>>>>>>> 891b672742b916305de7379c0460ab0815edce35
         ToShooter();
         enemyManagerShooter.SetActive(false);
     }
@@ -71,6 +84,8 @@ public class Camara : MonoBehaviour
             rotTwin.enabled = false;
             weaponTwin.enabled = false;
             canvasPlatform.enabled = true;
+            canvasShooter.enabled = false;
+            armaShooter.enabled = false;
 
             player.rotation = Quaternion.Euler(0,90,0);
 
@@ -92,9 +107,11 @@ public class Camara : MonoBehaviour
             rotTwin.enabled = true;
             weaponTwin.enabled = true;
             canvasPlatform.enabled = false;
+            canvasShooter.enabled = false;
             TwinLvl.SetActive(true);
             //muroTwin.SetActive(true);
             enemyManagerShooter.SetActive(false);
+            armaShooter.enabled = false;
 
             player.rotation = Quaternion.Euler(0, 90, 0);
 
@@ -113,6 +130,8 @@ public class Camara : MonoBehaviour
             rotTwin.enabled = false;
             weaponTwin.enabled = false;
             canvasPlatform.enabled = false;
+            canvasShooter.enabled = true;
+            armaShooter.enabled = true;
 
             ToShooter();
         }
