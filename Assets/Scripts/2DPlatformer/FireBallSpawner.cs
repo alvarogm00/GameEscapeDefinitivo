@@ -10,8 +10,8 @@ public class FireBallSpawner : MonoBehaviour
     public float timeToShoot;
     public float fireballSpeed;
 
-    float currentTimeToShoot;
-    bool canShoot = true;
+    public float currentTimeToShoot;
+    public bool canShoot = false;
 
     void Start()
     {
@@ -22,16 +22,23 @@ public class FireBallSpawner : MonoBehaviour
     {
         currentTimeToShoot -= Time.deltaTime;
 
-        if(currentTimeToShoot <= 0)
-        {
-            Shoot();
-        }
+        //if (currentTimeToShoot <= 0)
+        //{
+        //    canShoot = true;
+        //    Shoot();
+        //    //currentTimeToShoot = timeToShoot;
+        //}
+
     }
 
     void Shoot()
     {
-        GameObject fireballCopy = Instantiate(fireball, shootingPoint.position, Quaternion.identity);
+        //if (canShoot)
+        //{
+        //    GameObject fireballCopy = Instantiate(fireball, shootingPoint.position, Quaternion.identity);
 
-        fireballCopy.GetComponent<Fireball>().SetSpeed(fireballSpeed);
+        //    fireballCopy.GetComponent<Fireball>().SetSpeed(fireballSpeed);
+        //    canShoot = false;
+        //}       
     }
 }

@@ -47,6 +47,7 @@ public class Camara : MonoBehaviour
         weaponTwin.enabled = false;
         canvasPlatform.enabled = false;
         Cursor.lockState = CursorLockMode.Locked;
+        ToShooter();
     }
 
     // Update is called once per frame
@@ -122,6 +123,7 @@ public class Camara : MonoBehaviour
         camara.transform.position = Vector3.MoveTowards(camara.transform.position, pos1.transform.position, speed * Time.deltaTime);
 
         transform.rotation = Quaternion.Lerp(transform.rotation, pos1.transform.rotation, 1 * Time.deltaTime);
+        camara.transform.SetParent(null);
 
         if (camara.transform.position == pos1.transform.position && camara.transform.rotation == pos1.transform.rotation)
         {
@@ -141,6 +143,8 @@ public class Camara : MonoBehaviour
         camara.transform.position = Vector3.MoveTowards(camara.transform.position, pos2.transform.position, speed * Time.deltaTime);
 
         transform.rotation = Quaternion.Lerp(transform.rotation, pos2.transform.rotation, rotationSpeed * Time.deltaTime);
+        camara.transform.SetParent(null);
+
 
         if (camara.transform.position == pos2.transform.position && camara.transform.rotation == pos2.transform.rotation)
         {
@@ -156,6 +160,7 @@ public class Camara : MonoBehaviour
     public void ToShooter()
     {
         camara.transform.position = Vector3.MoveTowards(camara.transform.position, pos3.transform.position, speed * Time.deltaTime);
+        camara.transform.SetParent(player);
 
         transform.rotation = Quaternion.Lerp(transform.rotation, pos3.transform.rotation, 1 * Time.deltaTime);
 
