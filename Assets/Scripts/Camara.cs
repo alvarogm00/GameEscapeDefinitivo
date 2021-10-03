@@ -24,6 +24,7 @@ public class Camara : MonoBehaviour
 
     public GameObject TwinLvl;
     public GameObject enemyManagerShooter;
+    public GameObject armaTwin;
     public SingleBulletWeapon armaShooter;
 
     float speed = 5;
@@ -59,6 +60,7 @@ public class Camara : MonoBehaviour
 
         TwinLvl.SetActive(false);
         armaShooter.enabled = false;
+        armaTwin.SetActive(false);
 
         ToShooter();
         enemyManagerShooter.SetActive(false);
@@ -81,6 +83,7 @@ public class Camara : MonoBehaviour
             canvasPlatform.enabled = true;
             canvasShooter.enabled = false;
             armaShooter.enabled = false;
+            armaTwin.SetActive(false);
 
             player.rotation = Quaternion.Euler(0,90,0);
 
@@ -106,6 +109,7 @@ public class Camara : MonoBehaviour
             TwinLvl.SetActive(true);
             enemyManagerShooter.SetActive(false);
             armaShooter.enabled = false;
+            armaTwin.SetActive(true);
 
             player.rotation = Quaternion.Euler(0, 90, 0);
 
@@ -126,6 +130,7 @@ public class Camara : MonoBehaviour
             canvasPlatform.enabled = false;
             canvasShooter.enabled = true;
             armaShooter.enabled = true;
+            armaTwin.SetActive(false);
 
             ToShooter();
         }
