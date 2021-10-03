@@ -34,20 +34,20 @@ public class ManagerTwinStick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentPoints >= objectivePointsLvl1 /*&& tpado==false*/)
-        {
-            camara1.enabled = false;
-            player1.SetActive(false);
-            ball1.SetActive(false);
-            spawner1.SetActive(false);
-            lvl1.SetActive(false);
+        //if (currentPoints >= objectivePointsLvl1 /*&& tpado==false*/)
+        //{
+        //    camara1.enabled = false;
+        //    player1.SetActive(false);
+        //    ball1.SetActive(false);
+        //    spawner1.SetActive(false);
+        //    lvl1.SetActive(false);
 
-            camara2.enabled = true;
-            player2.SetActive(true);
-            ball2.SetActive(true);
-            spawner2.SetActive(true);
-            lvl2.SetActive(true);
-        }
+        //    camara2.enabled = true;
+        //    player2.SetActive(true);
+        //    ball2.SetActive(true);
+        //    spawner2.SetActive(true);
+        //    lvl2.SetActive(true);
+        //}
 
         if (currentPoints >= objectivePointsLvl2)
         {
