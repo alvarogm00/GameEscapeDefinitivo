@@ -20,7 +20,6 @@ public class Camara : MonoBehaviour
     public Weapon weaponTwin;
     public Canvas canvasPlatform;
     public Canvas canvasShooter;
-    public Canvas canvasTwin;
     //public GameObject muroTwin;
 
     public GameObject TwinLvl;
@@ -54,7 +53,6 @@ public class Camara : MonoBehaviour
         weaponTwin.enabled = false;
         canvasPlatform.enabled = false;
         canvasShooter.enabled = true;
-        canvasTwin.enabled = false;
         Cursor.lockState = CursorLockMode.Locked;
         TwinLvl.SetActive(false);        
 
@@ -84,7 +82,6 @@ public class Camara : MonoBehaviour
             weaponTwin.enabled = false;
             canvasPlatform.enabled = true;
             canvasShooter.enabled = false;
-            canvasTwin.enabled = false;
             armaShooter.enabled = false;
             armaTwin.SetActive(false);
 
@@ -109,7 +106,6 @@ public class Camara : MonoBehaviour
             weaponTwin.enabled = true;
             canvasPlatform.enabled = false;
             canvasShooter.enabled = false;
-            canvasTwin.enabled = true;
             TwinLvl.SetActive(true);
             enemyManagerShooter.SetActive(false);
             armaShooter.enabled = false;
@@ -133,7 +129,6 @@ public class Camara : MonoBehaviour
             weaponTwin.enabled = false;
             canvasPlatform.enabled = false;
             canvasShooter.enabled = true;
-            canvasTwin.enabled = false;
             armaShooter.enabled = true;
             armaTwin.SetActive(false);
 
