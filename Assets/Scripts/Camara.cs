@@ -152,6 +152,7 @@ public class Camara : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, pos1.transform.rotation, 1 * Time.deltaTime);
         camara.transform.SetParent(null);
 
+
         if (camara.transform.position == pos1.transform.position && camara.transform.rotation == pos1.transform.rotation)
         {
             controlPlatform.enabled = true;

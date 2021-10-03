@@ -1686,7 +1686,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 32768
   m_currentHealth: 30
-  m_maxHealth: 0
+  m_maxHealth: 30
   m_seeingAngle: 5
   m_seeingDistance: 5
   m_attackDistance: 10

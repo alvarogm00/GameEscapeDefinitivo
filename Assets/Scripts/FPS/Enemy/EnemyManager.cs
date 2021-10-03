@@ -39,6 +39,11 @@ public class EnemyManager : TemporalSingleton<EnemyManager>
                     enemyVector[i].transform.rotation = m_spawnPoints[spawnIndex].rotation;
                     enemyVector[i].SetActive(true);
                     enemyVector[i].GetComponent<EnemySimpleStateMachine>().m_currentHealth = enemyVector[i].GetComponent<EnemySimpleStateMachine>().m_maxHealth;
+                    if (enemyVector[i].GetComponent<EnemySimpleStateMachine>().m_collider != null)
+                    {
+                        enemyVector[i].GetComponent<EnemySimpleStateMachine>().m_collider.enabled = true;
+                    }
+                    enemyVector[i].GetComponent<EnemySimpleStateMachine>().m_collider.enabled = true;
                     break;
                 }
             }

@@ -50,7 +50,6 @@ public class EnemySimpleStateMachine : MonoBehaviour
             m_waypointsVector[i] = waypointsVector[i].transform;
         }
         m_lastWaypoint = m_waypointsVector[0];
-
     }
 
     public void Update()

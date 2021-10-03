@@ -15,4 +15,10 @@ public class FPSDoor : MonoBehaviour
     {
         m_anim.SetTrigger("Open");
     }
+
+    public void Close()
+    {
+        m_anim.SetTrigger("Close");
+    }
+
 }
