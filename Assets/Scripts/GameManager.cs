@@ -70,8 +70,8 @@ public class GameManager : TemporalSingleton<GameManager>
     public void EnemyKilled(GameObject enemy)
     {
         EnemyManager.Instance.EnemyDead(enemy);
-        m_score += 10;
-        canvasController.m_scoreValue.text = m_score.ToString();
+        //m_score += 10;
+        //canvasController.m_scoreValue.text = m_score.ToString();
     }
 
     public void UpdateAmmo(int currentAmmo, int maxAmmo)
@@ -90,15 +90,12 @@ public class GameManager : TemporalSingleton<GameManager>
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        canvasController.m_finalScorePanel.SetActive(true);
         Time.timeScale = 0;
         if (gametype1)
         {
-            canvasController.m_finalScore.text = m_score.ToString();
         }
         else
         {
-            canvasController.m_finalScore.text = m_currentTime.ToString();
         }
     }
 

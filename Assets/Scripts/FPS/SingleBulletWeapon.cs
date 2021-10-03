@@ -123,6 +123,7 @@ public class SingleBulletWeapon : MonoBehaviour
             if (hit.collider.GetComponent<EnemySimpleStateMachine>())
             {
 				hit.collider.GetComponent<EnemySimpleStateMachine>().TakeDamage(data.damage);
+				Debug.Log("Te hago daño");
 			}
 		}
 

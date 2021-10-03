@@ -7,13 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class GameCanvasController : MonoBehaviour
 {
-    public Text         m_time;
     public Text         m_currentAmmo;
     public Text         m_maxAmmo;
-    public Text         m_scoreValue;
     public Text         m_healthValue;
-    public Text         m_finalScore;
-    public GameObject   m_finalScorePanel;
     public GameObject   m_pausePanel;
 
     // Start is called before the first frame update

@@ -21,7 +21,6 @@ public class AttackState : StateMachineBehaviour
         animator.transform.LookAt(m_playerTransform);
         if (m_enemyStateMachine.IsPlayerInAttackRange(m_playerTransform) == true)
         {
-            Debug.Log("EnRango");
             m_enemyStateMachine.Shoot();
         }
         else
