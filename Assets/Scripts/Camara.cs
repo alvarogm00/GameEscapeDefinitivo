@@ -19,17 +19,9 @@ public class Camara : MonoBehaviour
     public Rotation rotTwin;
     public Weapon weaponTwin;
     public Canvas canvasPlatform;
-<<<<<<< Updated upstream
-<<<<<<< HEAD
+    public Canvas canvasShooter;
     //public GameObject muroTwin;
-=======
-    public Canvas canvasShooter;
-    public GameObject muroTwin;
->>>>>>> 891b672742b916305de7379c0460ab0815edce35
-=======
-    public Canvas canvasShooter;
-    public GameObject muroTwin;
->>>>>>> Stashed changes
+
     public GameObject TwinLvl;
     public GameObject enemyManagerShooter;
     public SingleBulletWeapon armaShooter;
@@ -44,7 +36,6 @@ public class Camara : MonoBehaviour
     bool thirdPerson;
     bool platform;
 
-    // Start is called before the first frame update
     void Start()
     {
         camara.transform.position = pos3.transform.position;
@@ -62,20 +53,13 @@ public class Camara : MonoBehaviour
         canvasPlatform.enabled = false;
         canvasShooter.enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-        //muroTwin.SetActive(false);
         TwinLvl.SetActive(false);        
-=======
-        muroTwin.SetActive(false);
+
+        TwinLvl.SetActive(false);
+
         TwinLvl.SetActive(false);
         armaShooter.enabled = false;
->>>>>>> 891b672742b916305de7379c0460ab0815edce35
-=======
-        muroTwin.SetActive(false);
-        TwinLvl.SetActive(false);
-        armaShooter.enabled = false;
->>>>>>> Stashed changes
+
         ToShooter();
         enemyManagerShooter.SetActive(false);
     }
@@ -120,7 +104,6 @@ public class Camara : MonoBehaviour
             canvasPlatform.enabled = false;
             canvasShooter.enabled = false;
             TwinLvl.SetActive(true);
-            muroTwin.SetActive(true);
             enemyManagerShooter.SetActive(false);
             armaShooter.enabled = false;
 

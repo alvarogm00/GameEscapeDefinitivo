@@ -36,8 +36,7 @@ public class GameManager : TemporalSingleton<GameManager>
 
         EnemyManager.Instance.CreateEnemies(m_numOfEnemies, m_maxNumOfEnemies);
 
-        canvasController.m_scoreValue.text = m_score.ToString();
-        canvasController.m_finalScorePanel.SetActive(false);
+       
         canvasController.m_pausePanel.SetActive(false);
     }
 
