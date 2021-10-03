@@ -1813,7 +1813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBody: {fileID: 665876447}
-  mouseSensitivity: 100
+  mouseSensitivity: 1000
 --- !u!114 &541907032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4583,8 +4583,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0, y: 8.965137, z: 30.24738}
-  m_Center: {x: 0, y: 3.9825683, z: -0.36061668}
+  m_Size: {x: 0, y: 8.965137, z: 9.756181}
+  m_Center: {x: -2.442026e-12, y: 3.9825683, z: 2.4610457}
 --- !u!1001 &1393405356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6119,10 +6119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_fpsKeys: 0
   gametype1: 0
-  m_maxTime: 100
-  m_maxScore: 0
   m_numOfEnemies: 1
-  m_maxNumOfEnemies: 1
+  m_maxNumOfEnemies: 5
 --- !u!4 &1899785884
 Transform:
   m_ObjectHideFlags: 0
@@ -6937,15 +6935,45 @@ PrefabInstance:
       propertyPath: m_PreserveAspect
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3687046410342296104, guid: 12ee76af625d6304d81772bff8d81d15,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3687046410342296104, guid: 12ee76af625d6304d81772bff8d81d15,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3687046410342296104, guid: 12ee76af625d6304d81772bff8d81d15,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3687046410342296104, guid: 12ee76af625d6304d81772bff8d81d15,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3907247431441827972, guid: 12ee76af625d6304d81772bff8d81d15,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4490828950162162513, guid: 12ee76af625d6304d81772bff8d81d15,
+        type: 3}
+      propertyPath: m_maxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490828950162162517, guid: 12ee76af625d6304d81772bff8d81d15,
+        type: 3}
+      propertyPath: life
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 4490828950162162518, guid: 12ee76af625d6304d81772bff8d81d15,
         type: 3}
       propertyPath: m_maxHealth
-      value: 1000000000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4490828950162162538, guid: 12ee76af625d6304d81772bff8d81d15,
         type: 3}

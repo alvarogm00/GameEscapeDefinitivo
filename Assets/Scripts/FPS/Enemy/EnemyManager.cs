@@ -38,6 +38,7 @@ public class EnemyManager : TemporalSingleton<EnemyManager>
                     enemyVector[i].transform.position = m_spawnPoints[spawnIndex].position;
                     enemyVector[i].transform.rotation = m_spawnPoints[spawnIndex].rotation;
                     enemyVector[i].SetActive(true);
+                    enemyVector[i].GetComponent<EnemySimpleStateMachine>().m_currentHealth = enemyVector[i].GetComponent<EnemySimpleStateMachine>().m_maxHealth;
                     break;
                 }
             }

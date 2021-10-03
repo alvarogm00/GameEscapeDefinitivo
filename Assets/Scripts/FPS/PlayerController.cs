@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
         GameManager.Instance.UpdateHealth(m_currentHealth);
         if (m_currentHealth <= 0)
         {
-            GameManager.Instance.SetFinalScorePanel();
+            //GameManager.Instance.SetFinalScorePanel();
         }
     }
     void SetAnimController(int weaponIndex)

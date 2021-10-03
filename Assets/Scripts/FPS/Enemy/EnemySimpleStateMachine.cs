@@ -17,7 +17,8 @@ public class EnemySimpleStateMachine : MonoBehaviour
     public LayerMask        ignoreMask;
 
     [Header("Stats")]
-    public int              m_health;
+    public int              m_currentHealth;
+    public int              m_maxHealth;
     public float            m_seeingAngle;
     public float            m_seeingDistance;
     public float            m_attackDistance;
@@ -40,6 +41,7 @@ public class EnemySimpleStateMachine : MonoBehaviour
         m_animator = GetComponent<Animator>();
         m_shootSound = GetComponent<AudioSource>();
         m_player = FindObjectOfType<PlayerController>();
+        m_currentHealth = m_maxHealth;
 
         GameObject[] waypointsVector = GameObject.FindGameObjectsWithTag("Waypoint");
         m_waypointsVector = new Transform[waypointsVector.Length];
@@ -66,8 +68,8 @@ public class EnemySimpleStateMachine : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        m_health -= damage;
-        if(m_health <= 0)
+        m_currentHealth -= damage;
+        if(m_currentHealth <= 0)
         {
             m_animator.SetTrigger("Death");
         }

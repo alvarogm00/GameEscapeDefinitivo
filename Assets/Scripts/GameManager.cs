@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class GameManager : TemporalSingleton<GameManager>
 {
-    float m_currentTime;
-    float m_score;
+    //float m_currentTime;
     public int m_fpsKeys;
 
     public bool gametype1;
-    public float m_maxTime;
-    public int m_maxScore;
+
     public int m_numOfEnemies;
     public int m_maxNumOfEnemies;
 
@@ -34,9 +32,7 @@ public class GameManager : TemporalSingleton<GameManager>
         else if (Blackboard.m_gameType == GameType.PLAYER_VS_PLAYER)
             SetGameType2();
 
-        EnemyManager.Instance.CreateEnemies(m_numOfEnemies, m_maxNumOfEnemies);
-
-       
+        EnemyManager.Instance.CreateEnemies(m_numOfEnemies, m_maxNumOfEnemies);       
         canvasController.m_pausePanel.SetActive(false);
     }
 
@@ -90,7 +86,7 @@ public class GameManager : TemporalSingleton<GameManager>
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         if (gametype1)
         {
         }
@@ -128,14 +124,14 @@ public class GameManager : TemporalSingleton<GameManager>
     public void SetGametype1()
     {
         gametype1 = true;
-        m_currentTime = m_maxTime;
+        //m_currentTime = m_maxTime;
         MusicManager.Instance.PlayBackgroundMusic(AppSounds.GAME1_MUSIC);
     }
 
     public void SetGameType2()
     {
         gametype1 = false;
-        m_currentTime = 0;
+        //m_currentTime = 0;
         MusicManager.Instance.PlayBackgroundMusic(AppSounds.GAME2_MUSIC);
     }
 }
